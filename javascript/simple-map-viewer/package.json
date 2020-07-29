@@ -1,0 +1,13 @@
+{
+  "name": "simple_map_viewer",
+  "dependencies": {
+    "ol": "6.4.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel index.html --port 3000",
+    "build": "parcel build --experimental-scope-hoisting --public-url . index.html"
+  }
+}
