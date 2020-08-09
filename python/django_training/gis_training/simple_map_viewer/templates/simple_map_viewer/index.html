@@ -1,0 +1,60 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Map Viewer</title>
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+    <script src="https://unpkg.com/@openlayers/pepjs"></script>
+    <link src="{% static 'simple_map_viewer/dist/main.css' %}">
+    <style>
+        .map {
+            width: 100%;
+            height: 400px;
+        }
+
+        .extent-wrapper {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>
+        <a href="/">Home</a>
+    </h1>
+</header>
+<h1>Simple Map Viewer</h1>
+<hr/>
+<div id="map" class="map"></div>
+
+<div class="extent-wrapper">
+    <ul>
+        <li>X min: <span id="xmin"></span></li>
+        <li>Y min: <span id="ymin"></span></li>
+        <li>X max: <span id="xmax"></span></li>
+        <li>Y max: <span id="ymax"></span></li>
+    </ul>
+    <p>Current Center: <span id="currentMapCenter"></span></p>
+    <p>Current Zoom Level: <span id="currentZoomLevel"></span></p>
+    <div>
+        <div>
+            <label>Enter Extent Title</label>
+            <input type="text" id="title" placeholder="Enter Title">
+        </div>
+        <div>
+            <label>Description</label>
+            <textarea id="w3review" rows="4" cols="50"></textarea>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'simple_map_viewer/dist/main.js' %}"></script>
+</body>
+</html>

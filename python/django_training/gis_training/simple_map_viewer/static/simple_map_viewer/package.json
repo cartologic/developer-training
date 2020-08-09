@@ -1,0 +1,13 @@
+{
+  "name": "simple_map_viewer",
+  "dependencies": {
+    "ol": "6.4.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel main.js --out-file main",
+    "build": "parcel build main.js --out-file main"
+  }
+}
