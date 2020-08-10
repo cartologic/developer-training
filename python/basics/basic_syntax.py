@@ -1,6 +1,7 @@
 var1 = 'String'
-var2 = 01
+var2 = 1
 var3 = [1, 2, ]
+var4 = 10.12
 
 
 def foo(a):

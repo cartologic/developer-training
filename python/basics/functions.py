@@ -1,11 +1,33 @@
 from dictionaries import extended_person_info
 
-def addTwoNumbers(a=0, b=0):
+def simpleFunction():
+    print("Hello World!")
+
+# return value
+def returnGreeting():
+    return "Hello, World!!!"
+
+# accepts params and return values
+def addTwoNumbers(a, b):
     return a + b
 
+# default values:
+def mulNumbers(a=1, b):
+    return a * b
 
+# Just Call Simple Function:
+simpleFunction()
+
+# print the return value of returnGreeting
+print(returnGreeting())
+
+# Print value of addition
 print(addTwoNumbers(2, 5))
 
-print(addTwoNumbers(b="Name1"))
+# call using positional args
+print(mulNumbers(10, 10))
+# call using named args
+print(mulNumbers(a=2, b=3))
 
-print(extended_person_info['first_name'])
+# call and use default values
+print(mulNumbers(b=20))
